@@ -1,0 +1,661 @@
+.courses-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Courses Header Section */
+.courses-header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 120px;
+  background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?w=1920');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.courses-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(50, 67, 109, 0.85);
+  z-index: 1;
+}
+
+.courses-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: left;
+}
+
+.courses-header-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 15px 0;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.courses-header-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Courses Statistics Section */
+.courses-stats-section {
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+
+.courses-stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.courses-stat-card {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.courses-stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.courses-stat-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #903232;
+}
+
+.courses-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #32436d;
+  margin: 0 0 8px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.courses-stat-label {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .courses-header {
+    height: 300px;
+  }
+
+  .courses-header-content {
+    padding: 0 30px;
+  }
+
+  .courses-header-title {
+    font-size: 2.5rem;
+  }
+
+  .courses-header-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .courses-stats-section {
+    padding: 60px 30px;
+  }
+
+  .courses-stats-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .courses-stat-card {
+    padding: 15px;
+  }
+
+  .courses-stat-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .courses-stat-number {
+    font-size: 2.2rem;
+  }
+
+  .courses-stat-label {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-header {
+    height: 250px;
+  }
+
+  .courses-header-content {
+    padding: 0 20px;
+  }
+
+  .courses-header-title {
+    font-size: 2rem;
+  }
+
+  .courses-header-subtitle {
+    font-size: 1rem;
+  }
+
+  .courses-stats-section {
+    padding: 50px 20px;
+  }
+
+  .courses-stats-container {
+    gap: 35px;
+  }
+
+  .courses-stat-card {
+    padding: 10px;
+  }
+
+  .courses-stat-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 1.8rem;
+  }
+
+  .courses-stat-number {
+    font-size: 2rem;
+  }
+
+  .courses-stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Undergraduate Programs Section */
+.undergraduate-section {
+  padding: 80px 40px;
+  background-color: #f5f5f5;
+}
+
+.undergraduate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.undergraduate-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #32436d;
+  margin: 0 0 10px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.undergraduate-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 40px 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Postgraduate Programs Section */
+.postgraduate-section {
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+
+.postgraduate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.postgraduate-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #32436d;
+  margin: 0 0 10px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.postgraduate-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 40px 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Programs Table Styles */
+.programs-table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.programs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
+}
+
+.programs-table thead {
+  background-color: #32436d;
+}
+
+.programs-table thead th {
+  color: white;
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.programs-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.programs-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.programs-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.programs-table tbody td {
+  padding: 20px;
+  color: #333;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.programs-table .code-cell {
+  color: #903232;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Postgraduate Table - Different Header Color */
+.postgraduate-table thead {
+  background-color: #903232;
+}
+
+/* Table Responsive */
+@media (max-width: 768px) {
+  .undergraduate-section,
+  .postgraduate-section {
+    padding: 60px 30px;
+  }
+
+  .undergraduate-title,
+  .postgraduate-title {
+    font-size: 1.8rem;
+  }
+
+  .undergraduate-subtitle,
+  .postgraduate-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .programs-table thead th {
+    padding: 15px 12px;
+    font-size: 0.9rem;
+  }
+
+  .programs-table tbody td {
+    padding: 15px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .undergraduate-section,
+  .postgraduate-section {
+    padding: 50px 20px;
+  }
+
+  .undergraduate-title,
+  .postgraduate-title {
+    font-size: 1.6rem;
+  }
+
+  .undergraduate-subtitle,
+  .postgraduate-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .programs-table thead th {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+  }
+
+  .programs-table tbody td {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Diploma & Certificate Programs Section */
+.diploma-section {
+  padding: 80px 40px;
+  background-color: #f5f5f5;
+}
+
+.diploma-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.diploma-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #32436d;
+  margin: 0 0 10px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.diploma-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 40px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.diploma-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.diploma-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.diploma-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.diploma-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.diploma-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #32436d;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 6px;
+  align-self: flex-start;
+}
+
+.diploma-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #32436d;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+}
+
+.diploma-card-body {
+  flex: 1;
+}
+
+.diploma-specializations {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+.diploma-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.diploma-clock-icon {
+  color: #903232;
+  font-size: 1.1rem;
+}
+
+.diploma-duration {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Diploma Section Responsive */
+@media (max-width: 768px) {
+  .diploma-section {
+    padding: 60px 30px;
+  }
+
+  .diploma-title {
+    font-size: 1.8rem;
+  }
+
+  .diploma-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .diploma-cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .diploma-card {
+    padding: 25px;
+  }
+
+  .diploma-card-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .diploma-section {
+    padding: 50px 20px;
+  }
+
+  .diploma-title {
+    font-size: 1.6rem;
+  }
+
+  .diploma-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .diploma-cards {
+    gap: 20px;
+  }
+
+  .diploma-card {
+    padding: 20px;
+  }
+
+  .diploma-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .diploma-card-title {
+    font-size: 1.1rem;
+  }
+
+  .diploma-specializations {
+    font-size: 0.9rem;
+  }
+
+  .diploma-duration {
+    font-size: 0.95rem;
+  }
+}
+
+/* Call to Action Section */
+.courses-cta-section {
+  padding: 80px 40px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.courses-cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.courses-cta-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #32436d;
+  margin: 0 0 20px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.courses-cta-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666;
+  margin: 0 0 40px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.courses-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.courses-cta-button {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.courses-cta-button.download {
+  background-color: #903232;
+  color: white;
+  border: 2px solid #903232;
+}
+
+.courses-cta-button.download:hover {
+  background-color: #7a2929;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(144, 50, 50, 0.3);
+}
+
+.courses-cta-button.apply {
+  background-color: #32436d;
+  color: white;
+  border: 2px solid #32436d;
+}
+
+.courses-cta-button.apply:hover {
+  background-color: #283657;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(50, 67, 109, 0.3);
+}
+
+/* CTA Section Responsive */
+@media (max-width: 768px) {
+  .courses-cta-section {
+    padding: 60px 30px;
+  }
+
+  .courses-cta-title {
+    font-size: 1.9rem;
+  }
+
+  .courses-cta-text {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .courses-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .courses-cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-cta-section {
+    padding: 50px 20px;
+  }
+
+  .courses-cta-title {
+    font-size: 1.7rem;
+  }
+
+  .courses-cta-text {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  .courses-cta-button {
+    padding: 14px 30px;
+    font-size: 0.95rem;
+  }
+}

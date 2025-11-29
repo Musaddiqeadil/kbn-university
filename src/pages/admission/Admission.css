@@ -1,0 +1,865 @@
+.admissions-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Admissions Page Header */
+.admissions-header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 120px;
+  background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?w=1920');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.admissions-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(50, 67, 109, 0.85);
+  z-index: 1;
+}
+
+.admissions-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.admissions-header-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 15px 0;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.admissions-header-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  max-width: 700px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admissions-header {
+    height: 300px;
+  }
+
+  .admissions-header-content {
+    padding: 0 30px;
+  }
+
+  .admissions-header-title {
+    font-size: 2.5rem;
+  }
+
+  .admissions-header-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admissions-header {
+    height: 250px;
+  }
+
+  .admissions-header-content {
+    padding: 0 20px;
+  }
+
+  .admissions-header-title {
+    font-size: 2rem;
+  }
+
+  .admissions-header-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Admission Process Section */
+.admission-process-section {
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+
+.admission-process-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.admission-process-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #32436d;
+  margin: 0 0 15px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.admission-process-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 60px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 45px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: linear-gradient(to right, #903232 0%, #903232 33%, #903232 66%, #903232 100%);
+  z-index: 0;
+}
+
+.process-step {
+  position: relative;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 80px 25px 30px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #32436d;
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #903232;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(144, 50, 50, 0.3);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: white;
+}
+
+.navy-icon {
+  background-color: #32436d;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #32436d;
+  margin: 0 0 15px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.step-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Responsive Design for Process Section */
+@media (max-width: 768px) {
+  .admission-process-section {
+    padding: 60px 30px;
+  }
+
+  .admission-process-heading {
+    font-size: 1.8rem;
+  }
+
+  .admission-process-subtitle {
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 20px;
+  }
+
+  .process-steps::before {
+    display: none;
+  }
+
+  .process-step {
+    padding: 70px 20px 25px;
+  }
+
+  .step-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .step-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Eligibility Criteria Section */
+.eligibility-section {
+  padding: 80px 40px;
+  background-color: #f5f5f5;
+}
+
+.eligibility-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eligibility-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #32436d;
+  margin: 0 0 15px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.eligibility-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 50px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.eligibility-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.eligibility-card {
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid #903232;
+  padding: 30px 35px;
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.eligibility-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.eligibility-program {
+  display: flex;
+  align-items: center;
+}
+
+.program-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #32436d;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.eligibility-academic,
+.eligibility-exam {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.criteria-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.criteria-text {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+}
+
+.exam-text {
+  color: #903232;
+  font-weight: 500;
+}
+
+/* Responsive Design for Eligibility Section */
+@media (max-width: 768px) {
+  .eligibility-section {
+    padding: 60px 30px;
+  }
+
+  .eligibility-heading {
+    font-size: 1.8rem;
+  }
+
+  .eligibility-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .eligibility-card {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px 25px;
+  }
+
+  .program-name {
+    font-size: 1.2rem;
+  }
+
+  .criteria-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eligibility-section {
+    padding: 50px 20px;
+  }
+
+  .eligibility-heading {
+    font-size: 1.6rem;
+  }
+
+  .eligibility-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .eligibility-list {
+    gap: 15px;
+  }
+
+  .eligibility-card {
+    padding: 20px 20px;
+    gap: 20px;
+    border-left-width: 3px;
+  }
+
+  .program-name {
+    font-size: 1.15rem;
+  }
+
+  .criteria-label {
+    font-size: 0.8rem;
+  }
+
+  .criteria-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Fee Structure Section */
+.fee-structure-section {
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+
+.fee-structure-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fee-structure-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #32436d;
+  margin: 0 0 15px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.fee-structure-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 50px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.fee-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fee-table thead {
+  background: #32436d;
+}
+
+.fee-table thead tr th {
+  padding: 20px 25px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+}
+
+.fee-table tbody tr {
+  border-bottom: 1px solid #e8e8e8;
+  transition: background-color 0.2s ease;
+}
+
+.fee-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.fee-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.fee-table tbody tr td {
+  padding: 20px 25px;
+  font-size: 1rem;
+  color: #555;
+  font-family: "Inter", sans-serif;
+}
+
+.fee-table tbody tr td:first-child {
+  font-weight: 600;
+  color: #32436d;
+}
+
+.total-fee {
+  color: #903232 !important;
+  font-weight: 600 !important;
+}
+
+.fee-note {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+/* Responsive Design for Fee Structure Section */
+@media (max-width: 768px) {
+  .fee-structure-section {
+    padding: 60px 30px;
+  }
+
+  .fee-structure-heading {
+    font-size: 1.8rem;
+  }
+
+  .fee-structure-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .fee-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .fee-table thead tr th {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
+
+  .fee-table tbody tr td {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
+
+  .fee-note {
+    font-size: 0.85rem;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fee-structure-section {
+    padding: 50px 20px;
+  }
+
+  .fee-structure-heading {
+    font-size: 1.6rem;
+  }
+
+  .fee-structure-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .fee-table thead tr th {
+    padding: 14px 15px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .fee-table tbody tr td {
+    padding: 14px 15px;
+    font-size: 0.9rem;
+  }
+
+  .fee-note {
+    font-size: 0.8rem;
+    margin-top: 15px;
+  }
+}
+
+/* Download Brochure Section */
+.download-brochure-section {
+  padding: 80px 40px;
+  background-color: #f5f5f5;
+}
+
+.download-brochure-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brochure-card {
+  background: linear-gradient(135deg, #32436d 0%, #5a3a52 50%, #903232 100%);
+  border-radius: 16px;
+  padding: 60px 50px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.download-icon {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  color: white;
+}
+
+.brochure-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 20px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.brochure-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto 40px;
+  max-width: 700px;
+  font-family: "Inter", sans-serif;
+}
+
+.brochure-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-download,
+.btn-apply {
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-download {
+  background: white;
+  color: #32436d;
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-apply {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-apply:hover {
+  background: white;
+  color: #903232;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.contact-info {
+  margin-top: 50px;
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #32436d;
+  margin: 0 0 12px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-details {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.contact-details a {
+  color: #903232;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-details a:hover {
+  color: #32436d;
+  text-decoration: underline;
+}
+
+/* Responsive Design for Download Brochure Section */
+@media (max-width: 768px) {
+  .download-brochure-section {
+    padding: 60px 30px;
+  }
+
+  .brochure-card {
+    padding: 50px 35px;
+  }
+
+  .download-icon {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 25px;
+  }
+
+  .download-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brochure-title {
+    font-size: 1.8rem;
+  }
+
+  .brochure-description {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+
+  .brochure-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-download,
+  .btn-apply {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 28px;
+    font-size: 0.95rem;
+  }
+
+  .contact-info {
+    margin-top: 40px;
+    padding: 25px;
+  }
+
+  .contact-heading {
+    font-size: 1.1rem;
+  }
+
+  .contact-details {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-brochure-section {
+    padding: 50px 20px;
+  }
+
+  .brochure-card {
+    padding: 40px 25px;
+  }
+
+  .download-icon {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
+  }
+
+  .download-icon svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brochure-title {
+    font-size: 1.5rem;
+  }
+
+  .brochure-description {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .btn-download,
+  .btn-apply {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .btn-download svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contact-info {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .contact-heading {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-details {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .admission-process-section {
+    padding: 50px 20px;
+  }
+
+  .admission-process-heading {
+    font-size: 1.6rem;
+  }
+
+  .admission-process-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-step {
+    padding: 65px 20px 25px;
+  }
+
+  .step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    top: -18px;
+  }
+
+  .step-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .step-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .step-title {
+    font-size: 1.05rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+  }
+}
